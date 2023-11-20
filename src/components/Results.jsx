@@ -6,7 +6,7 @@ function Results({ infoData }) {
   return mydata.map((item, index) => (
     <div key={index}>
       Results
-      {/* <span>{item.links.map((p) => p.href)}</span> */}
+      <img src="{item.links.map((p) => p.href)}" />
       <h2>titile:{item.data.map((t) => t.title)}</h2>
       <h3>data:{item.data.map((t) => t.data_created)}</h3>
       <p>description:{item.data.map((t) => t.description)}</p>

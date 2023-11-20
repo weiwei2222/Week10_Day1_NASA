@@ -5,14 +5,15 @@ function Results({ infoData }) {
 
   return mydata.map((item, index) => (
     <div key={index}>
-      Results
-      <img src="{item.links.map((p) => p.href)}" />
-      {item.data.map((t) => (
-        <>
-          <h2>title:{t.title}</h2>
-          <h3>data:{t.data_created}</h3>
-          <p>description:{t.description}</p>
-        </>
+      {/* {item.links.map((p, index) => (
+        <div key={index}>{p.href}</div>
+      ))} */}
+      {item.data.map((t, index) => (
+        <div key={index}>
+          <h2>title: {t.title}</h2>
+          <h3>data: {t.date_created}</h3>
+          <p>keywords: {t.keywords}</p>
+        </div>
       ))}
     </div>
   ));

@@ -10,7 +10,6 @@ function Sreach() {
   const [infoData, setInfoData] = useState(null);
 
   const handleChange = (event) => {
-    event.preventDefault();
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
@@ -20,8 +19,8 @@ function Sreach() {
     console.log(formData.searchterm);
   };
 
-  const getSreach = async (searchTerm) => {
-    const url = `https://images-api.nasa.gov/search?q=${searchTerm}`;
+  const getSreach = async (keyword) => {
+    const url = `https://images-api.nasa.gov/search?q=${keyword}`;
     try {
       const response = await fetch(url);
       const data = await response.json();
@@ -35,8 +34,7 @@ function Sreach() {
     getSreach();
   }, []);
 
-  console.log(infoData, typeof infoData);
-
+  console.log(infoData);
   return (
     <>
       <div>This is Sreach page.</div>
@@ -51,7 +49,7 @@ function Sreach() {
           <input type="submit" value="submit" />
         </form>
       </div>
-      {/* {infoData ? <Results infoData={infoData} /> : "loading...."} */}
+      {infoData ? <Results infoData={infoData} /> : "loading...."}
     </>
   );
 }

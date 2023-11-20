@@ -7,9 +7,13 @@ function Results({ infoData }) {
     <div key={index}>
       Results
       <img src="{item.links.map((p) => p.href)}" />
-      <h2>titile:{item.data.map((t) => t.title)}</h2>
-      <h3>data:{item.data.map((t) => t.data_created)}</h3>
-      <p>description:{item.data.map((t) => t.description)}</p>
+      {item.data.map((t) => (
+        <>
+          <h2>title:{t.title}</h2>
+          <h3>data:{t.data_created}</h3>
+          <p>description:{t.description}</p>
+        </>
+      ))}
     </div>
   ));
 }

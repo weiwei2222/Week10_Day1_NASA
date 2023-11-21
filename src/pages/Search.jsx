@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Results from "../components/results";
 
-function Sreach() {
+function Search() {
   const [formData, setFormData] = useState({
     searchterm: "",
   });
@@ -15,10 +15,10 @@ function Sreach() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    getSreach(formData.searchterm);
+    getSearch(formData.searchterm);
   };
 
-  const getSreach = async (keyword) => {
+  const getSearch = async (keyword) => {
     const url = `https://images-api.nasa.gov/search?q=${keyword}`;
     try {
       const response = await fetch(url);
@@ -30,12 +30,12 @@ function Sreach() {
   };
 
   useEffect(() => {
-    getSreach();
+    getSearch();
   }, []);
 
   return (
     <>
-      <div>This is Sreach page.</div>
+      <div>This is search page.</div>
       <div>
         <form onSubmit={handleSubmit}>
           <input
@@ -52,4 +52,4 @@ function Sreach() {
   );
 }
 
-export default Sreach;
+export default Search;

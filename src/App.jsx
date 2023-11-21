@@ -6,7 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Sreach from "./pages/Sreach";
+import Search from "./pages/Search";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/sreach" element={<Sreach />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </div>
   );

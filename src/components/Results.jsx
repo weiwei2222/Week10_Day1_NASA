@@ -5,9 +5,10 @@ function Results({ infoData }) {
 
   return mydata.map((item, index) => (
     <div key={index}>
-      {/* {item.links.map((p, index) => (
-        <div key={index}>{p.href}</div>
-      ))} */}
+      {item.links &&
+        item.links
+          .filter((r) => r.render === "image")
+          .map((p, index) => <img src={p.href} key={index} />)}
       {item.data.map((t, index) => (
         <div key={index}>
           <h2>title: {t.title}</h2>

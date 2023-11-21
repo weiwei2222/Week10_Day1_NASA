@@ -16,7 +16,6 @@ function Sreach() {
   const handleSubmit = (event) => {
     event.preventDefault();
     getSreach(formData.searchterm);
-    console.log(formData.searchterm);
   };
 
   const getSreach = async (keyword) => {
@@ -34,7 +33,6 @@ function Sreach() {
     getSreach();
   }, []);
 
-  console.log(infoData);
   return (
     <>
       <div>This is Sreach page.</div>

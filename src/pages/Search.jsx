@@ -33,6 +33,7 @@ function Search() {
     getSearch();
   }, []);
 
+  console.log(infoData);
   return (
     <>
       <div>This is search page.</div>

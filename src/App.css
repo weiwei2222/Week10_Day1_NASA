@@ -15,3 +15,15 @@
 .stockslist {
   color: blue;
 }
+.results {
+  float: left;
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  background-color: #f6f6f6;
+  margin: 10px 20px;
+  padding: 20px 10px;
+}
+.results img {
+  width: 150px;
+}

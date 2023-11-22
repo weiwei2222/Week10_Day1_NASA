@@ -4,7 +4,7 @@ function Results({ infoData }) {
   const mydata = infoData.collection.items;
 
   return mydata.map((item, index) => (
-    <div key={index}>
+    <div key={index} className="results">
       {item.links &&
         item.links
           .filter((r) => r.render === "image")
